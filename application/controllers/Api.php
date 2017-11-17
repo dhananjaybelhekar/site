@@ -36,7 +36,8 @@ class Api extends CI_Controller {
 	}
 	public function login()
 	{
-		echo json_encode(array("d1"=>45445));
+		$this->load->model('log');
+		$this->log->query("select *from log")->result_array();
 	// 	$this->load->database();
 	// 	$this->load->library('user_agent');
 	// 	$req = json_decode($this->input->raw_input_stream);	
